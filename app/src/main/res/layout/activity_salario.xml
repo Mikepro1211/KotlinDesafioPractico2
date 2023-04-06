@@ -1,18 +1,169 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/drawer_layout"
     tools:context=".salario">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:layout_marginTop="45dp"
+       >
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_marginTop="5dp">
+           <TextView
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:text="Calculadora de salario neto"
+               android:textAlignment="center"
+               android:textSize="25dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginBottom="30dp"
+               >
 
-    <TextView
-        android:id="@+id/textView"
+           </TextView>
+            <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="@string/ingrese_su_nombre"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_sal_nombre"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="textPersonName"
+                   android:gravity="start"
+
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Salario Base"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_sal_salario"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="numberDecimal"
+                   android:gravity="start"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Descuento ISS"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_sal_salarioISS"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:gravity="start"
+                   android:enabled="false"
+
+                   android:textColor="@color/design_default_color_secondary_variant"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Descuento AFP"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_sal_salarioAFP"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:gravity="start"
+                   android:enabled="false"
+
+                   android:textColor="@color/design_default_color_secondary_variant"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Descuento Renta"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_sal_renta"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:gravity="start"
+                   android:enabled="false"
+
+                   android:textColor="@color/design_default_color_secondary_variant"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <com.google.android.material.textfield.TextInputLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:hint="Total a pagar"
+               >
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/txt_sal_salariototal"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:inputType="text"
+                   android:gravity="start"
+                   android:enabled="false"
+
+                   android:textColor="@color/design_default_color_secondary_variant"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <Button
+               android:id="@+id/btn_sal_calcular"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:text="Calcular">
+
+           </Button>
+           <Button
+               android:id="@+id/btn_sal_savedata"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:text="Saved datad">
+           </Button>
+           <Button
+               android:id="@+id/btn_sal_mostrardata"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="10dp"
+               android:text="Mostrar">
+           </Button>
+
+       </LinearLayout>
+   </ScrollView>
+    <!--BARRA DE ARRIBA  HEADER-->
+
+    <include
+        layout= "@layout/app_bar_main"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+
+    <!--BARRA DE NAVEGACION-->
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="317dp"
-        android:text="Estoy en Salario"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main_drawer"
+        />
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

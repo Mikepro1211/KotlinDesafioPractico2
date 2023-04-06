@@ -46,7 +46,7 @@ class Register : AppCompatActivity() {
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
                     //sing in successful
-                    val intent = Intent(this, MainActivity::class.java)
+                    val intent = Intent(this, salario::class.java)
                     startActivity(intent)
                     Toast.makeText(baseContext, "Informacion agregada con exito", Toast.LENGTH_LONG)
                         .show()

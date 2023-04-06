@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <EditText
+        android:id="@+id/etStuName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Estudiante"
+        android:inputType="textPersonName"
+        />
+    <EditText
+        android:id="@+id/etStuNota1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nota 1 Actualizado"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        />
+    <EditText
+        android:id="@+id/etStuNota2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nota 2 Actualizado"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        />
+    <EditText
+        android:id="@+id/etStuNota3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nota 3 Actualizado"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        />
+    <EditText
+        android:id="@+id/etStuNota4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nota 4 Actualizado"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        />
+    <EditText
+        android:id="@+id/etStuNota5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Nota 5 Actualizado"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        />
+    <EditText
+        android:id="@+id/etStuPromedio"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:hint="Promedio Actualizado"
+        android:inputType="numberDecimal"
+        android:enabled="false"
+        />
+    <Button
+        android:id="@+id/btnUpdateData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/update"
+        android:layout_marginTop="20dp"
+        />
+
+</LinearLayout>

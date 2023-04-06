@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import android.widget.TextView
 import android.widget.Toast
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -52,7 +51,7 @@ class Login : AppCompatActivity() {
             .addOnCompleteListener(this){task ->
                 if (task.isSuccessful){
                     //sign in success update UI with the signed-in user's information
-                    val intent = Intent(this,MainActivity::class.java)
+                    val intent = Intent(this,salario::class.java)
                     startActivity(intent)
                     Toast.makeText(this,"Se ha iniciado  con exito",Toast.LENGTH_LONG).show()
                 }else{

@@ -12,14 +12,29 @@
         android:theme="@style/Theme.Kotlin"
         tools:targetApi="31">
         <activity
-            android:name=".salario"
+            android:name=".StudentDetailsActivity"
             android:exported="false" />
         <activity
-            android:name=".MainActivity"
+            android:name=".AverageFetchingActivity"
             android:exported="false" />
+        <activity
+            android:name=".EmployeeDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SalaryFetchingActivity"
+            android:exported="false" />
+        <activity
+            android:name=".promedio"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
+        <activity
+            android:name=".salario"
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".Register"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar" />
         <activity
             android:name=".SplashActivity"
             android:exported="true"
